@@ -5,7 +5,7 @@ const ToDos: React.FC<{ items: ToDoModel[] }> = (props) => {
   return (
     <ul>
       {props.items.map((item) => (
-        <ToDo id={item.id} text={item.text} key={item.id}/>
+        <ToDo text={item.text} key={item.id}/>
       ))}
     </ul>
   )

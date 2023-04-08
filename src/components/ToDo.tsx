@@ -1,4 +1,4 @@
-const ToDo: React.FC<{id: string, text: string}> = (props) => {
+const ToDo: React.FC<{text: string}> = (props) => {
   return <>
   <li>{props.text}</li>
   </>;
