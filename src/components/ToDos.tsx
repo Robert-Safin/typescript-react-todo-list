@@ -1,10 +1,11 @@
-import ToDo from "../models/ToDo"
+import ToDoModel from "../models/ToDo"
+import ToDo from "./ToDo"
 
-const ToDos: React.FC<{ items: ToDo[] }> = (props) => {
+const ToDos: React.FC<{ items: ToDoModel[] }> = (props) => {
   return (
     <ul>
       {props.items.map((item) => (
-        <li key={item.id}>{item.text}</li>
+        <ToDo id={item.id} text={item.text} key={item.id}/>
       ))}
     </ul>
   )

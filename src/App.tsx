@@ -1,9 +1,9 @@
 import "./App.css";
 import ToDos from "./components/ToDos";
-import ToDo from "./models/ToDo";
+import ToDoModel from "./models/ToDo";
 
 function App() {
-  const todos = [new ToDo("1"), new ToDo("2")];
+  const todos = [new ToDoModel("Walk the dog"), new ToDoModel("Hit the gym")];
   return (
     <>
       <ToDos items={todos} />
