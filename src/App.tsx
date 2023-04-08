@@ -1,9 +1,9 @@
 import "./App.css";
-
+import ToDos from "./components/ToDos";
 function App() {
   return (
     <>
-      <p>banan</p>
+      <ToDos items={["1", "2"]} />
     </>
   );
 }
