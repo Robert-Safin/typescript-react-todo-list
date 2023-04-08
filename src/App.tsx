@@ -5,6 +5,7 @@ import NewToDo from "./components/NewToDo";
 import { useState } from "react";
 
 function App() {
+
   const [todos, setTodos] = useState<ToDoModel[]>([]);
 
   const addToDoHandler = (text: string) => {
@@ -14,10 +15,16 @@ function App() {
     });
   };
 
+  const removeToDoHandler = (id: string) => {
+    setTodos((prevTodos) => {
+      return prevTodos.filter((todo) => todo.id !== id);
+    });
+  };
+
   return (
     <>
       <NewToDo onAddToDo={addToDoHandler}/>
-      <ToDos items={todos} />
+      <ToDos items={todos} onRemoveToDo={removeToDoHandler}/>
     </>
   );
 }
